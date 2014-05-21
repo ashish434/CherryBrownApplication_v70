@@ -1,0 +1,97 @@
+.imagepluscontainer {
+	position: relative;
+}
+
+.imagepluscontainer img {
+	position: relative;
+	z-index: 2;
+	-moz-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.imagepluscontainer:hover img {
+	-moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	-moz-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
+}
+
+.imagepluscontainer div.desc {
+	position: absolute;
+	width: 90%;
+	z-index: 1;
+	bottom: 0;
+	left: 5px;
+	padding: 8px;
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+	-moz-border-radius: 0 0 8px 8px;
+	-webkit-border-radius: 0 0 8px 8px;
+	border-radius: 0 0 8px 8px;
+	opacity: 0;
+	-moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+	-webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+	-moz-transition: all 0.5s ease 0.5s;
+	-webkit-transition: all 0.5s ease 0.5s;
+	-o-transition: all 0.5s ease 0.5s;
+	-ms-transition: all 0.5s ease 0.5s;
+	transition: all 0.5s ease 0.5s;
+}
+
+.imagepluscontainer:hover div.desc {
+	-moz-transform: translate(0, 100%);
+	-webkit-transform: translate(0, 100%);
+	-ms-transform: translate(0, 100%);
+	-o-transform: translate(0, 100%);
+	transform: translate(0, 100%);
+	opacity: 1;
+}
+
+.imagepluscontainer div.rightslide {
+	height: 160px;
+	width: 350px;
+	top: 15px;
+	right: 0;
+	left: auto;
+	bottom: auto;
+	padding-left: 15px;
+	-moz-border-radius: 0 8px 8px 0;
+	-webkit-border-radius: 0 8px 8px 0;
+	border-radius: 0 8px 8px 0;
+}
+
+.imagepluscontainer:hover div.rightslide {
+	-moz-transform: translate(100%, 0);
+	-webkit-transform: translate(100%, 0);
+	-ms-transform: translate(100%, 0);
+	-o-transform: translate(100%, 0);
+	transform: translate(100%, 0);
+}
+
+.imagepluscontainer div.leftslide {
+	height: 180px;
+	width: 350px;
+	top: 15px;
+	left: 0;
+	bottom: auto;
+	padding-left: 15px;
+	-moz-border-radius: 8px 0 0 8px;
+	-webkit-border-radius: 8px 0 0 8px;
+	border-radius: 8px 0 0 8px;
+}
+
+.imagepluscontainer:hover div.leftslide {
+	-moz-transform: translate(-120%, 0);
+	-webkit-transform: translate(-100%, 0);
+	-ms-transform: translate(-100%, 0);
+	-o-transform: translate(-100%, 0);
+	transform: translate(-120%, 0);
+}

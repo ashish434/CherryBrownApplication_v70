@@ -1,0 +1,7 @@
+com.tcs.ilp.dao
+com.tcs.ilp.delegate
+com.tcs.ilp.domain
+com.tcs.ilp.exception
+com.tcs.ilp.struts
+com.tcs.ilp.util
+com.tcs.ilp.web

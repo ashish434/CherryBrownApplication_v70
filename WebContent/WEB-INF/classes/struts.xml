@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<constant name="struts.devMode" value="true" />
+   <package name="MyProject" extends="struts-default">
+       
+  	<global-results>
+  	<result name="error">/error.jsp</result>
+	</global-results>
+
+	<global-exception-mappings>
+  		<exception-mapping exception="java.lang.Throwable" result="error"/>
+	</global-exception-mappings> 
+
+	
+	
+	 <action name="home" class="com.tcs.ilp.struts.CustomerManagementAction" method="processHome">
+            <result name="success">/home.jsp</result>
+      </action>
+	
+     <action name="login" class="com.tcs.ilp.struts.LoginManagementAction" method="processLogin">
+             <result name="input">/home.jsp</result>
+            <result name="admin">/adminHome.jsp</result>
+             <result name="customer">/customerHome.jsp</result>
+      </action>
+     
+      <action name="logout" class="com.tcs.ilp.struts.LoginManagementAction" method="processLogout">
+            <result name="success">/index.jsp</result>
+            <result name="error">/error.jsp</result>
+      </action>
+     
+      
+      <action name="customerRegistration" class="com.tcs.ilp.struts.CustomerManagementAction" method="processRegisterCustomer">
+            <result name="success">/registerCustomer.jsp</result>
+      </action>
+      
+      
+       <action name="registerNewCustomer" class="com.tcs.ilp.struts.CustomerManagementAction" method="processCustomerRegistration">
+            <result name="input">/registerCustomer.jsp</result>
+            <result name="success">/registrationSuccess.jsp</result>
+            <result name="failure">/error.jsp</result>
+      </action>
+      
+       
+      <action name="photoGallery" class="com.tcs.ilp.struts.CustomerManagementAction" method="processPhotoGallery">
+            <result name="success">/photoGallery.jsp</result>
+      </action>
+       
+      <action name="testConnection" class="com.tcs.ilp.struts.RoomManagementAction" method="processTestConnection">
+            <result name="success">/testConnection.jsp</result>
+      </action>
+      
+        
+      <action name="adminHome" class="com.tcs.ilp.struts.RoomManagementAction" method="processAdminHome">
+            <result name="success">/adminHome.jsp</result>
+      </action>
+      
+      
+      <action name="manageRoomRequests" class="com.tcs.ilp.struts.RoomManagementAction" method="processGetAllRoomRequests">
+            <result name="success">/listRoomRequests.jsp</result>
+      </action>
+      
+      <action name="viewAllRoomDetails" class="com.tcs.ilp.struts.RoomManagementAction" method="processViewAllRoomDetails">
+            <result name="success">/viewAllRoomDetails.jsp</result>
+            <result name="error">/error.jsp</result>
+      </action>
+      
+       <action name="allotRoomRequest" class="com.tcs.ilp.struts.RoomManagementAction" method="processAllotCustomerRoom">
+            <result name="success">/allotRoomToRoomRequest.jsp</result>
+   			 <result name="error">/error.jsp</result>
+       </action>
+      
+      <action name="addRoomRequest" class="com.tcs.ilp.struts.RoomManagementAction" method="processAddRoomRequest">
+            <result name="success">/rReqSuccess.jsp</result>
+            <result name="input">/roomBooking.jsp</result>
+            <result name="failure">/error.jsp</result>
+      </action>
+      
+      
+       <action name="customerHome" class="com.tcs.ilp.struts.CustomerManagementAction" method="processCustomerHome">
+            <result name="success">/customerHome.jsp</result>
+      </action>
+      
+      
+      
+      
+      <action name="bookRoom" class="com.tcs.ilp.struts.CustomerManagementAction" method="processBookCustomerRoom">
+            <result name="success">/roomBooking.jsp</result>
+      </action>
+      
+      
+      <action name="customerRoomRequestStatus" class="com.tcs.ilp.struts.CustomerManagementAction" method="processCheckCustomerRoomRequestStatus">
+            <result name="success">/customerRoomRequestStatus.jsp</result>
+      </action>
+      
+      <action name="checkCustomerRoomRequestStatusByREQID" class="com.tcs.ilp.struts.CustomerManagementAction" method="processCustomerRoomRequestStatus">
+          <result name="input">/customerRoomRequestStatus.jsp</result>
+            <result name="success">/currentRoomRequestStatus.jsp</result>
+            <result name="failure">/error.jsp</result>
+      </action>
+      
+
+      <action name="customerRoomRequestStatusByCUSTID" class="com.tcs.ilp.struts.CustomerManagementAction" method="processCheckCustomerRoomRequestStatus">
+            <result name="success">customerRoomRequestStatusByCustomerId.jsp</result>
+      </action>
+      
+      <action name="checkCustomerRequestsByCUSTID" class="com.tcs.ilp.struts.CustomerManagementAction" method="processCustomerRoomRequestStatusByCustomerId">
+          <result name="input">/customerRoomRequestStatusByCustomerId.jsp</result>
+            <result name="success">/currentRoomRequestStatusByCustomerId.jsp</result>
+            <result name="success1">/customerRoomRequestStatusErrorByCustomerId.jsp</result>
+            <result name="error">/error.jsp</result>
+      </action>
+      
+       <action name="cancelRoomRequest" class="com.tcs.ilp.struts.CustomerManagementAction" method="processCancelRoomRequest">
+            <result name="success">/cancelRoomRequest.jsp</result>
+            <result name="failure">/error.jsp</result>
+      </action>
+      
+    <action name="viewCustomerProfile" class="com.tcs.ilp.struts.CustomerManagementAction" method="processViewCustomerProfile">
+            <result name="success">/viewCustomerProfile.jsp</result>
+      </action>
+      
+      <action name="editCustomerProfile" class="com.tcs.ilp.struts.CustomerManagementAction" method="processEditCustomerProfile">
+           <result name="success">editCustomerProfile.jsp</result>
+      </action>
+         
+      <action name="updateCustomerProfile" class="com.tcs.ilp.struts.CustomerManagementAction" method="processUpdateCustomerProfile">
+            <result name="input">editCustomerProfile.jsp</result>
+           <result name="success" type="chain">viewCustomerProfile</result>
+      </action>
+      
+   </package>
+</struts>

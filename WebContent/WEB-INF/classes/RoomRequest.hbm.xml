@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 31 Jan, 2014 7:42:00 PM by Myself -->
+<hibernate-mapping>
+    <class name="com.tcs.ilp.domain.RoomRequest" table="ROOM_REQUEST_GROUP1">
+        <id name="requestId" type="java.lang.String">
+            <column name="REQUESTID" />
+            <generator class="assigned">
+            </generator>
+        </id>
+        <property name="customerId" type="java.lang.String">
+            <column name="CUSTOMERID" />
+        </property>
+        <property name="checkInDate" type="java.lang.String">
+            <column name="CHECKINDATE" />
+        </property>
+        <property name="checkOutDate" type="java.lang.String">
+            <column name="CHECKOUTDATE" />
+        </property>
+        <property name="numberOfRoomsRequired" type="int">
+            <column name="NUMBEROFROOMSREQUIRED" />
+        </property>
+        <property name="requestedRoomType" type="java.lang.String">
+            <column name="REQUESTEDROOMTYPE" />
+        </property>
+        <property name="ACRequired" type="java.lang.String">
+            <column name="ACREQUIRED" />
+        </property>
+        <property name="requestedCategory" type="java.lang.String">
+            <column name="REQUESTEDCATEGORY" />
+        </property>
+        <property name="requestStatus" type="java.lang.String">
+            <column name="REQUESTSTATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

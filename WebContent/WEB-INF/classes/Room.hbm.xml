@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 31 Jan, 2014 7:42:00 PM by Myself -->
+<hibernate-mapping>
+    <class name="com.tcs.ilp.domain.Room" table="ROOM_DETAILS_GROUP1">
+        <id name="roomNumber" type="int">
+            <column name="ROOMNUMBER" />
+            <generator class="assigned">
+            </generator>
+        </id>
+        <property name="floorNumber" type="int">
+            <column name="FLOORNUMBER" />
+        </property>
+        <property name="roomStatus" type="java.lang.String">
+            <column name="ROOMSTATUS" />
+        </property>
+        <property name="roomType" type="java.lang.String">
+            <column name="ROOMTYPE" />
+        </property>
+        <property name="acFacility" type="java.lang.String">
+            <column name="ACFACILITY" />
+        </property>
+        <property name="category" type="java.lang.String">
+            <column name="CATEGORY" />
+        </property>
+        <property name="requestId" type="java.lang.String">
+            <column name="REQUESTID" />
+        </property>
+    </class>
+</hibernate-mapping>
